@@ -1,0 +1,855 @@
+/*colors : bleu #0065fc //	bleuclair #DEEBFF // gris : #F2F2F2 */
+
+/* ---------------- FONTS -----------------*/
+
+	@font-face { 
+		font-family: "Raleway-b";
+		src: url("polices/Raleway-Bold.ttf") format("truetype");	 
+		font-weight: normal;
+		font-style: normal;	
+	}
+
+	@font-face {
+		font-family: "Raleway-r";
+		src: url("polices/Raleway-Regular.ttf") format("truetype");	 
+		font-weight: normal;
+		font-style: normal;	
+		}
+				
+	.titre p, header h6, .hebergements p, footer a {
+		font-family: "Raleway-r";
+	}
+
+	* {
+		font-family: "Raleway-b";
+		font-weight: 300;
+	}
+
+/*----------------- BODY ------------------*/
+
+	body {	
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	.full {
+		margin: 0 auto;
+		max-width: 1440px;	
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+	}
+				
+	a:visited {
+		text-decoration: none;
+		color: black;
+	}
+
+	.b_star {
+		font-size: 14px;
+		color: #0065FC;
+	}
+
+	.g_star {
+		font-size: 14px;
+		color: lightgrey;
+	}
+
+/*----------------- HEADER ----------------*/
+	header > div:first-child {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#logo {
+		width: 13%;
+		margin-left: 2%;
+	}
+
+	.titre {
+		margin-left: 2%;
+	}
+
+	.titre p {
+		margin-top: -14px;
+	}
+
+	header h6 {
+		margin-bottom: 2%;
+		font-size: 14px;
+
+	}
+
+	header div:last-child {
+		display: flex;
+		align-items: baseline;
+		margin-top: -16px;
+	}
+
+	#info_logo {
+		border-radius: 100px;
+		color: #0065FC;
+		margin-left: 2%;
+		margin-right: 10px;
+		padding: 2px;
+		background-color: white;
+		border: 2px solid #F2F2F2;
+	}
+
+/*----------------  NAV -------------------*/
+	nav {
+		display: flex;
+		justify-self: flex-end;
+		margin-right: 4%
+	}
+
+	nav a {
+		height: 24px;
+		border-bottom: 4px solid transparent;
+		border-top: 4px solid transparent;
+		padding: 40px 10px 8px 10px;
+	}
+
+	nav a:first-child {
+		color: #0065fc;
+		border-top-color: #0065fc;
+	}
+
+	nav a:hover {
+		color: #0065FC;
+		transition: all linear 200ms;
+		border-bottom-color: #0065FC;
+		border-bottom-right-radius: 2px ;
+		border-bottom-left-radius: 2px ;	
+	}	
+
+/*---------- BARRE DE RECHERCHE -----------*/
+
+	form {
+		margin-left: 2%;
+		display: flex;
+		align-items: center;
+	}
+
+	form label i {
+		padding: 17px;
+		cursor: pointer;
+	}
+
+	form label {
+		border-radius: 16px 0 0 16px;
+		background-color: #F2F2F2;	
+	}
+
+	form label:hover{
+		background-color: #DEEBFF;
+	}
+		
+	form input {
+		padding: 14px;
+		font-size: 16px;
+		border: 1px solid #F2F2F2;
+	}
+
+	form input:focus {
+		outline: none;
+		color: #0065fc;
+		border: 1px solid #0065fc ;   /* <<<< ????????????????????*/
+	}
+
+	#btn_search {
+		background-color: #0065FC;
+		color: white;
+		border: 1px solid #0065FC;
+		border-radius: 0 16px 16px 0;
+		cursor: pointer;
+		padding-right: 16px;
+	}
+
+	#btn_search:hover{
+		transition: all ease 200ms;
+		background-color: royalblue;
+	}
+
+	#searchtool {
+		display: none;
+	}
+
+/*---------------- FILTRES --------------- */
+
+	.container_filtres {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 2%;
+		margin-left: 2%;
+		align-items: center;
+	}
+
+	.container_filtres p {
+		align-items: center;
+		padding-right: 16px;
+		margin-right: 1%;			
+		margin-top: 0;
+	}
+
+	.container_filtres p:first-child {
+		padding: 0;
+	}
+
+	.filtres {
+		display: flex;
+		border: 2px solid #F2F2F2;
+		border-radius: 30px;
+	}
+
+	.filtres i {
+		padding: 12px;
+		margin-right: 10px;
+		color: #0065FC;
+		background-color: #DEEBFF;
+		border-radius: 100px;
+	}
+
+	.filtres:hover {
+		cursor: pointer;
+		border: 2px solid #0065fc;
+		color: #0065FC;
+		padding-right: 16px;
+		background-color: #f2f2f2;
+		transform: scale(1.04);
+		box-shadow: 0px 1px 12px #C0C0C0;
+		transition: linear 300ms;	
+	}
+
+/* ---------- centre de la page -----------*/
+
+	.hebergements {	
+		display: flex;
+		justify-content: space-around;	
+		flex-wrap: wrap;	
+		}
+
+	.main_hebergements {
+		background-color: #F2F2F2;
+		border-radius: 20px;
+		width: 62%;	
+	}
+
+	.main_hebergements h2 {			
+		margin-left: 4%;
+	}
+
+	.container_resultats {
+		display: flex;	
+		flex-wrap: wrap;
+		padding: 0 2%;
+	}
+
+	.resultat {		
+		display: flex;
+		flex-direction: column;
+		height: fit-content;         /*    //////// ou auto*/
+		width: 28%;
+		border-radius: 10px ;
+		background: white;
+		padding: 3px;
+		margin: 2% auto;
+		box-shadow: 0px 3px 8px lightgrey;
+	}
+
+
+	.resultat img{
+		height: 140px;
+		border-radius: 10px 10px 0 0;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	.legende {
+		vertical-align:bottom;
+		margin: -8% 4% 0 4%;
+	}
+
+	.legende p {
+		margin-top: -6px;
+	}
+
+	.note {
+		display: flex;
+	}
+
+	.resultat:hover {
+		background-color: #DEEBFF;
+		transform: scale(1.1);
+		box-shadow: 0px 1px 12px #C0C0C0;
+		transition: all linear 300ms;	
+		background: linear-gradient(#DEEBFF, white, white);
+	}
+
+	#more {
+		padding: 3%;
+		margin-bottom: 2%;
+	}
+
+	#more:hover {
+		text-decoration: underline;
+		text-decoration-color: #0065fc;
+		color: #0065fc;
+	}
+
+/*----------------- ASIDE -----------------*/
+
+	aside {
+		width: 33%;	
+		display: flex;
+		flex-direction: column;
+		background-color: #F2F2F2;
+		border-radius: 20px;		
+	}
+	.popu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 auto;
+		margin-bottom: -3px;
+		width: 84%;		
+	}
+
+
+	.resultat_populaire {
+		border-radius: 10px;
+		width: 84%;
+		background-color: white;
+		margin: 4% auto;
+		box-shadow: 0px 3px 8px lightgrey;
+	}
+
+	.resultat_populaire a {
+		display: flex;
+	}
+
+	.resultat_populaire img {
+		margin: 4px;
+		border-radius: 10px 0 0 10px;
+		width: 40%;
+		min-width: 40%;
+		min-height: 170px;
+		max-height: 170px;
+		object-fit: cover;
+	}
+
+	.text_resultat_popu {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 0 2%;
+		padding-bottom: 4px;
+		min-height: 170px;				
+	}
+
+	.text_resultat_popu p {
+		padding-top: 14%;
+	}
+
+	.text_resultat_popu h3 {
+		margin: 10px 0 -40px 0;
+	}
+
+	.note_popu {
+		display: flex;
+		flex-direction: row;		
+	}
+
+	.note_popu img {
+		margin: 0;
+		width: 16px;
+		height: 16px;
+	}
+
+	.resultat_populaire:hover {
+		background: linear-gradient(to top, white, white, white, #DEEBFF);
+		transform: scale(1.05);
+		box-shadow: 0px 1px 12px #C0C0C0;
+		transition: all linear 300ms;
+	}
+
+/*------------- section activite ----------*/
+
+	.section_activites {
+		width: 98%;
+		margin-left: 2%;	
+	}
+
+	.section_activites h2 {
+		padding: 30px 0 0 0;
+	}
+
+	.container_activites {
+		height: 500px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}	
+
+	.container_activites h3 {
+		margin-left: 5%;
+	}
+
+	.activite04 h3 {
+		margin-block-start: 2%;
+		margin-top: 4%;
+	}
+
+	.container_activites a {
+		width: 22%;
+		border-radius: 10px;
+		box-shadow: 0px 3px 8px lightgrey;
+
+	}
+
+	.container_activites a:hover {
+		transition: all linear 300ms;
+		transform: scale(1.07);
+		background-color: #DEEBFF;
+		box-shadow: 0px 3px 6px #C0C0C0;
+		background: linear-gradient(white, #DEEBFF, white)
+	}
+
+	.activites img {
+		object-fit: cover;
+		object-position: 50% 0%;
+		width: 100%;
+		border-radius: 10px 10px 0 0;
+	}
+
+	.section_activites a:nth-child(1), .section_activites a:nth-child(4) {
+		height: 500px;
+	}
+
+
+	.activite01 img, .activite04 img {
+		max-height: 440px;
+		height: 449px;
+	}
+
+	.activite02 img {
+		object-position: 50% 30%;
+		max-height: 230px;
+	}
+
+	.activite03 img {
+		max-height: 120px;
+	}
+
+	.activite05 img {
+		max-height: 160px;
+	}
+
+	.activite06 img {
+			max-height: 190px ;
+	}
+
+/*---------------- FOOTER -----------------*/
+
+	footer {
+		margin-top: 3%;
+		background-color: #F2F2F2;
+		display: flex;
+		justify-content: space-evenly;
+		}
+
+	footer > div {
+		margin-top: 2%;	
+		}
+
+	footer ul {
+		padding-inline-start: 0;
+		line-height: 32px;
+		list-style: none;
+		}
+
+	footer a:hover {
+		text-decoration: underline;
+		color: #0065fc;
+		}
+
+
+/*--------------------------- >>>>>>>>>>>>>> MEDIUM DISPLAY <<<<<<<<<<<<<<< ------------------------------*/
+
+	@media screen and (min-width: 769px) and (max-width: 992px){
+
+
+	/* -------------- FONTS -------------------*/
+		.header h6 {
+			font-size: 10px;
+		}
+
+		p, footer a, header h6 {
+			font-size: 12px;
+		}
+
+		h3, #more, .filtres p {
+			font-size: 14px;
+		}
+
+		*, .container_filtres p {
+			font-size: 16px;
+		}
+
+	/* -------------- HEADER ----------------- */
+			#info_logo {
+				font-size: 14px;
+				}
+
+	/*--------------  NAV ---------------------*/
+
+		nav a {
+			padding: 30px 10px 0px 10px;
+			}
+
+	/*---------- BARRE DE RECHERCHE -----------*/
+
+		form label i {	
+			padding: 15px;
+			}
+
+		form input {
+			max-width: 60%;
+			font-size: 14px;
+			}
+
+	/*--------------- FILTRES----------------- */
+
+		.filtres {
+			font-size: 12px;
+		}
+
+		.filtres i {
+			padding: 10px;
+			margin-right: 4px;
+		}
+
+	/* ---------- centre de la page -----------*/
+
+		.main_hebergements h2 {
+			margin-top: 4%;
+		}
+
+		.resultat {
+				width: 45%;
+		}
+
+		.legende {
+			margin: -4% 4% 1% 4%;
+		}
+
+	/*--------------- ASIDE -------------------*/
+
+		.popu {
+			margin-top: 4%;		
+		}
+
+		.popu i {
+			font-size: 20px;
+			margin-right: 4%;
+		}
+
+		.resultat_populaire {
+			margin: auto;
+		}
+
+
+
+		.resultat_populaire a {
+			height: 140px;
+		}
+
+		.text_resultat_popu {
+			min-height: auto;
+		}
+
+	/*---------- section activite -------------*/
+
+		.section_activites h2 {
+			margin: 1% 0 0 2%;
+		}
+
+
+		.section_activites a:nth-child(even), .section_activites a:nth-child(odd) {
+			height: 180px;
+			}
+
+			.container_activites {
+				height: 420px;
+			}
+
+			.container_activites h3 {
+				margin-block-start: 2%;
+				margin-left: 8%;
+				}
+
+			.container_activites a {
+				margin-top: 3%;
+				width: 31%;	
+				height: 140px;
+				}
+
+		div[class*='activite0'] img {
+			width: 100%;
+			max-height: 140px;		
+			}
+
+} /* >>>> fin media medium <<<<*/
+
+
+/*--------------------------- >>>>>>>>>>>>>> SMALL DISPLAY <<<<<<<<<<<<<<< ------------------------------*/
+
+		@media screen and (max-width: 768px) {
+	
+	/* -------------- FONTS ------------------ */
+
+		nav, #more {
+			font-size: 20px;
+		}
+
+	/* -------------- HEADER ----------------- */
+
+		header > div:first-child {
+			display:block;
+		}
+
+		#logo {
+			display: block;
+			width: 35%;
+			margin: 2% auto;
+		}
+
+		.titre {
+			margin-right: 1%;
+			margin-left: 4%;
+		}
+
+		.titre p {
+			margin-top: -6px;
+		}
+
+		header h6 {
+			margin: 4% 4% 6% 0%;
+		}
+
+		#info_logo {
+			font-size: 16px;
+			padding: 6px;
+		}
+
+	/* -------------- NAV -------------------- */
+		
+		nav {
+			margin: 4% auto;
+			text-align: center;	
+		}
+
+		nav a {
+			width: 50%;
+			border-top: 4px solid transparent;
+			border-bottom: 4px solid transparent;
+			padding: 10px 0;
+		}
+
+		nav a:first-child {
+			border-top-color: transparent;
+			border-bottom-color: #0065fc;
+		}
+
+		nav a:hover {
+			color: #0065FC;
+			transition: all linear 200ms;
+			border-top-color: #0065FC;	
+		}
+
+	/*---------- BARRE DE RECHERCHE -----------*/
+
+		form label i {
+			padding: 19px;
+		}
+			
+		form input {
+			max-width: 200px;
+			padding: 16px;
+			border: 1px solid #F2F2F2;
+		}
+
+		#btn_search {
+			display: none;
+		}
+
+		#searchtool {
+			display: block;
+			position: relative;
+			right: 14px;
+			padding: 19px;
+			font-size: 16px;
+			background-color: #0065FC;
+			color: white;
+			border-radius: 16px;
+		}
+
+		#searchtool:hover {
+			background-color: royalblue;
+		}
+
+	/*--------------- FILTRES----------------- */
+
+		.container_filtres {
+			font-size: 20px;
+		}
+
+		.container_filtres p:first-child {
+			margin-top: 2%;
+			width: 100%;
+			}
+
+	/* ---------- centre de la page -----------*/
+
+		.hebergements {
+			flex-direction: column-reverse;
+		}
+
+		.main_hebergements {
+			margin-top: 5%;
+			width: 100%;
+			background-color: white;
+		}
+
+		.container_resultats {
+			margin: 0;
+		}
+
+		.resultat {
+			width: 88%;
+			margin: 3% auto;
+		}
+
+		.resultat:hover {
+			transform: scale(1.05);
+		}
+
+		.resultat img {
+			border-radius:20px 20px 0 0  ;
+			margin-bottom: -20px;
+			height: 160px;
+		}
+
+		.legende {
+			line-height: 6px;
+			padding-top:2% ;
+			margin: 2% 4%;
+		}
+
+		#more {
+			padding: 5%;
+		}
+
+	/*--------------- ASIDE -------------------*/
+
+		aside {
+			padding: 3% 0 6% 0;
+			width: 100%;
+			border-radius: 0;
+			}
+
+		.popu {
+			margin: 2% 6%;
+			justify-content: space-between;
+		}
+
+		.resultat_populaire {
+			width: 92%;
+			margin: 1% 4%;
+			border-radius: 20px;
+			
+		}
+
+		.resultat_populaire img {
+
+			min-width: 40%;
+			border-radius: 20px 0 0 20px;
+		}
+
+		.text_resultat_popu {
+			margin-right: 3%;
+		}
+
+	/*---------- section activite -------------*/
+
+		.section_activites {
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.section_activites h2 {
+			display: block;
+			border-top: 2px solid #F2F2F2;
+			padding-left: 5%;
+		}
+		.container_activites {
+			height: auto;
+			width: 90%;
+			margin: 0 auto;
+			flex-wrap: nowrap;	
+		}
+		
+		.section_activites a {		
+			max-height: 174px;
+		}
+
+		.container_activites a {
+			height: 176px;
+			width: 100%;
+			margin: 2% auto;
+			border-radius: 20px;	
+		}
+
+		.container_activites h3 {
+			padding-top: 2%;
+			margin-block: auto;
+		}
+
+		div[class*='activite0'] img {	
+			max-height: 130px;	
+			border-radius: 20px 20px 0 0;	
+		}
+
+		
+		.activite02 img {
+			object-position: 50%;	
+		}
+
+		.activite01 img, .activite04 img {
+			object-position: 50% 20%;
+		}
+
+		.activite03 img, .activite05 img {
+			object-position: 50% 30%;
+		}
+
+		.activite06 img {
+			object-position: 50% 45%;
+		}
+
+	/*---------------- FOOTER -----------------*/
+
+		footer {
+			margin-top: 6%;
+			padding: 4% 0;
+			flex-direction: column;
+		}
+
+		footer > div {
+			margin-left: 5%;
+		}
+
+	} /* >>>> fin small display <<<<*/
